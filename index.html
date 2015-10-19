@@ -1,4 +1,51 @@
----
-layout: main
-home: true
----
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width">
+
+  <title>Cassie Lear | Flutist</title>
+  <meta name="description" content="Cassie Lear</strong> is an active flute performer and teacher in the Seattle area. Cassie teaches at a studio located in the Greenwood neighborhood in Seattle and is the flute teacher at the Happy Minds School of Music in Bellevue. She performs as part of the flute duo Novantika, playing music from the Renaissance to today.">
+
+  <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+  <link rel="stylesheet" href="/stylesheets/main.css">
+
+  <!--<script>
+    {% if site.analytics  %}
+    var analytics=analytics||[];analytics.load=function(e){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net"+"/analytics.js/v1/"+e+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);var r=function(e){return function(){analytics.push([e].concat(Array.prototype.slice.call(arguments,0)))}},s=["identify","track"];for(var i=0;i<s.length;i++)analytics[s[i]]=r(s[i])},
+    analytics.load("{{ site.analytics }}");
+    {% endif %}
+  </script>-->
+</head>
+
+<body {% if page.home %} class="full-background-image" {% endif %}>
+  <div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="brand" href="./index.html">Cassie</a>
+      <div class="nav-collapse collapse">
+        <ul class="nav">
+          <li><a href="/">Home</a></li>
+          <li><a href="/bio">Biography</a></li>
+          <li><a href="/novantika">Novantika</a></li>
+          <li><a href="/static/docs/Cassie Lear Resume.pdf">Resume</a></li>
+          <li><a href="/listen">Listen</a></li>
+          <li><a href="/photos">Photos</a></li>
+          <li><a href="/links">Links</a></li>
+          <li><a href="/studio">Studio Information</a></li>
+          <li><a href="mailto:cassielear@gmail.com">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="container content-container">
+    {{content}}
+  </div>
+</body>
+</html>
