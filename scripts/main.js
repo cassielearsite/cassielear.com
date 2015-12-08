@@ -1,9 +1,10 @@
-var pages = ["#bio", "#novantika", "#resume", "#listen", "#photos", "#links", "#studio"];
+var pages = ["bio", "novantika", "resume", "listen", "photos", "links", "studio"];
 
 $(document).ready(function() {
   pages.forEach(function(page){
-    $(page).load("_posts/" + page + ".html");
-    $(page + "Nav").click(function(){switchContent(page)});
+    console.log(page);
+    $("#" + page).load("_posts/" + page + ".html");
+    $("#" + page + "Nav").click(function(){switchContent(page)});
   });
   switchContent();
 	/*$("#bio").click(function(){switchContent("#bio")});
@@ -18,11 +19,12 @@ $(document).ready(function() {
 });
 
 function switchContent(contentId) {
+  console.log("switch to " + contentId);
   pages.forEach(function(page){
-    $(page).hide();
+    $("#" + page).hide();
   })
 
   if (arguments.length > 0) {
-    $(contentId).show();
+    $("#" + contentId).show();
   };
 };
