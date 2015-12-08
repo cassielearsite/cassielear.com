@@ -6,7 +6,10 @@ $(document).ready(function() {
     $("#" + page).load("_posts/" + page + ".html");
     $("#" + page + "Nav").click(function(){switchContent(page)});
   });
+  $("a.brand").click(function(){switchContent()});
+  
   switchContent();
+  
 	/*$("#bio").click(function(){switchContent("#bio")});
   $("#novantika").click(function(){switchContent("#novantika")});
   $("#resume").click(function(){switchContent("#resume")});
@@ -22,9 +25,13 @@ function switchContent(contentId) {
   console.log("switch to " + contentId);
   pages.forEach(function(page){
     $("#" + page).hide();
-  })
+  });
 
   if (arguments.length > 0) {
     $("#" + contentId).show();
-  };
+    $("body").removeClass("full-background-image");
+  }
+  else {
+    $("body").addClass("full-background-image");
+  }
 };
