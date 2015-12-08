@@ -1,4 +1,4 @@
-var pages = ["bio", "novantika", "resume", "listen", "photos", "links", "studio"];
+var pages = ["bio", "resume", "listen", "photos", "links", "studio"];
 
 $(document).ready(function() {
   pages.forEach(function(page){
